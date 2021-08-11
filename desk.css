@@ -1,0 +1,113 @@
+
+/*For Desktop*/
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.83%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+.nav .nav-logo{
+    text-align: left;
+    margin-top: 0;
+}
+.nav .nav-head h1{
+    text-align: right;
+    margin-top: 10px
+}
+.nav-head h1{
+    padding-top: 10px;
+}
+.nav-menu{
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+.nav-menu a{
+    margin: 20px 0px;
+    padding: 15px;
+    background-color: transparent;
+}
+
+
+
+/* profile starts */
+.profile .top-icon{
+    top: 30px;
+    right: 60px;
+    transition: width 2s, transform 2s;
+}
+.profile .top-icon:hover{
+    width: 100px;
+    height: auto;
+}
+.profile .bottom-icon{
+    transition: width 2s, transform 2s;
+}
+.profile .bottom-icon:hover{
+    width: 50px;
+    height: auto;
+}
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* profile ends */
+
+/* About me starts*/
+.about-me{
+    margin-top: 70px;
+}
+.about-me img{
+    height: 250px;
+    width: 250px;
+}
+.about-me-desc p{
+    text-align: left;
+    margin: 10px;
+}
+/* About me ends*/
+
+/* professional skill starts*/
+.professional-experience{
+    padding: 20px;
+    margin: 20px 20px;
+}
+/* professional skill starts*/
+
+/* achievement-contact starts here */
+.achievement-contact{
+    margin-right: 30px;
+}
+/* achievement-contact ends here */
+
+/* contact-links */
+.contact-links{
+    position: relative;
+}
+.media-buttons{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: 120px;
+    transform: translate(-50%, -50%);
+}
+/* contact-links */
+
+/* Footer starts here */
+.footer-menu{
+    margin-top: 12px;
+}
+.footer-menu a{
+    display: inline;
+    margin: 10px;
+}
+/*
+/* Footer ends here */

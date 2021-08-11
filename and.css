@@ -1,0 +1,349 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+body{
+    margin: 0px;
+}
+.dotted-hr{
+    border: dotted 6px white;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 60px;
+}
+
+/* navigation starts */
+.nav{
+    background-color: rgb(0, 138, 138);
+    padding: 1% 7%;
+    text-align: center;
+}
+.nav-logo img{
+    height: 100px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: 0px 2px 15px 1px #000000;
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.nav-head h1{
+    color: rgb(0, 217, 255);
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.nav-menu a{
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color:  rgb(0, 122, 122);
+    margin: 4px;
+}
+.nav-menu a:hover{
+    background-color: rgb(0, 109, 109);
+    cursor: pointer;
+    transform: scale(1.05, 1.05);
+}
+
+[class*="col-"]{
+    float: left;
+}
+
+/*For mobile*/
+[class*="col-"]{
+    width: 100%;
+}
+.col-1, .col-2{
+    margin-top: 10px;
+}
+
+.nav::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* navigation ends */
+
+/* profile starts */
+.profile img{
+    height: 100px;
+    width: auto;
+}
+.profile{
+    padding: 20px 10px;
+    text-align: center;
+    position: relative;
+}
+.profile .top-icon{
+    position: absolute;
+    top: 30px;
+    right: 60px;
+    transition: transform 2s;
+}
+.profile .top-icon:hover{
+    transform: rotate(360deg);
+}
+.profile-desc{
+    margin: 150px auto;
+}
+.profile-desc h3{
+    font-family: 'satisfy', cursive;
+    font-size: 2rem;
+    color: #21af61;
+}
+.profile-desc h5{
+    font-size: 1.2rem;
+    color: #af9521
+}
+.profile .bottom-icon{
+    position: absolute;
+    left: 60px;
+    bottom: 30px;
+    transition: transform 2s;
+}
+.profile .bottom-icon:hover{
+    transform: rotate(-360deg);
+}
+/* profile ends */
+/* About me starts */
+    .about-me{
+        background-color: rgb(92, 199, 163);
+        color: white;
+        padding: 1% 7%;
+        text-align: center;
+        font-family: 'montsrrat', sans-serif;
+    }
+    .about-me-img img{
+        border: solid 5px white;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+    }
+    .about-me p{
+        text-align: center;
+        margin: 5px;
+    }
+    .about-me a{
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: white;
+    }
+    .cv-button{
+        background-color: rgb(206, 105, 58);
+        border-radius: 30px;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+        transition: transform 0.1s;
+    }
+    .about-me::after{
+        clear: both;
+        content: '';
+        display: table;
+    }
+/* About me ends */
+
+/* Professional Skills start */
+.professional-experience{
+    padding: 1% 3%;
+}
+.professional-experience .card{
+    background-color: slategrey;
+    padding: 0px;
+    border-radius: 5px;
+    transition: 0.3s;
+    height: 700px;
+    margin: 5px;
+}
+.professional-experience .card:hover{
+    box-shadow: 2px 2px 7px 2px black;
+}
+.card-icon{
+    text-align: center;
+}
+.card-icon img{
+    margin-top: 15px;
+    height: 100px;
+    width: 100px;
+    border: blanchedalmond 5px solid;
+    border-radius: 50%;
+    padding: 5px;
+}
+.professional-experience .card-title h2{
+    background: -webkit-linear-gradient(rgb(78, 79, 99) 1%, darkslateblue 90%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.professional-experience::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* skill starts*/
+.skills-container li{
+    list-style-type: none;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 50px 10px;
+    position: relative;
+}
+.skills-container li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    height: 10px;
+    width: 100%;
+    border-radius: 100px;
+    background-color: rgb(138, 151, 163);
+}
+.skills-container li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    height: 10px;
+    width: 0px;
+    border-radius: 100px;
+    background-color: rgb(68, 95, 122);
+
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}
+.skills-container li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 95%;
+    }
+}
+.skills-container li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width: 80%;
+    }
+}
+.skills-container li.js::after{
+    animation-name: js;
+}
+@keyframes js{
+    to{
+        width: 25%;
+    }
+}
+.skills-container li.c::after{
+    animation-name: c;
+}
+@keyframes c{
+    to{
+        width: 85%;
+    }
+}
+.skills-container li.cpp::after{
+    animation-name: cpp;
+}
+@keyframes cpp{
+    to{
+        width: 90%;
+    }
+}
+/* skill ends*/
+/* Professional Skills end */
+
+/* achievement Contact starts here */
+.achievement-contact{
+    padding: 1% 7%;
+    background-color: rgb(0, 217, 255);
+    color: white;
+}
+.achievement-contact h2{
+    text-align: center;
+}
+.contact{
+    padding: 0% 5%;
+    text-align: center;
+}
+.contact input, textarea{
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+.contact button{
+    padding: 10px;
+    background-color: slategray;
+    color: white;
+    border-radius: 10px;
+    width: 80px;
+    cursor: pointer;
+    margin: 15px;
+}
+.contact-links{
+    text-align: center;
+}
+.contact-links .btn{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    width: 50px;
+    background-color: white;
+}
+.contact-links .btn:hover{
+background-color: #565656;
+}
+
+.achievement-contact::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* achievement Contact ends here */
+
+/* Footer starts here */
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.footer-menu a{
+    text-decoration: none;
+    display: block;
+    margin: 15px 0;
+    font-size: 1rem;
+}
+.footer-menu a:hover{
+    color: gray;
+}
+.footer::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* Footer ends here */
